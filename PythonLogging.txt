@@ -1,0 +1,10 @@
+Logging Levels:
+------------------------------------------------------------
+DEBUG: Detailed info
+INFO: Confirmation of things working correctly
+WARNING: (Default level) Indication things are not so good
+ERROR: More serious prob preventing app from running
+CRITICAL: Serious error
+"""
+logging.basicConfig(level=logging.DEBUG)
+#logging.debug(error statement here)
