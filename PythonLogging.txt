@@ -11,7 +11,7 @@ CRITICAL: Serious error
 #Must import logging module: 
 import logging
 
-#Logging setup:
+#Logging file setup:
 logging.basicConfig(filename='Logfile.log', level=logging.DEBUG, format='%(created)f:%(levelname)s:%(message)s')
 
 Options: (Seperate by commas)
@@ -21,15 +21,35 @@ filename='Logfile.log'
 
 #Send log entry
 logging.debug(error statement here)
+logging.exception(error statement) - shows traceback info + error message
 
+-- EXAMPLES --
 
-
-
-
-Better/Improved Logging Setup Example: 
+Better/Improved Logging File Setup Example: 
 LSTLOGGER = logging.getLogger(__name__)
 LSTLOGGER.setLevel(logging.INFO)
 LSTLOGGERFMT = logging.Formatter('%(created)f:%(levelname)s:%(message)s')
 LSTLOGHANDLER = logging.FileHandler('LinuxSystemToolbox.log')
 LSTLOGHANDLER.setFormatter(LSTLOGGERFMT)
 LSTLOGGER.addHandler(LSTLOGHANDLER)
+
+Logging to console only example: 
+#Logging stream to console example: 
+LSTLOGGER = logging.getLogger(__name__)
+LSTLOGGER.setLevel(logging.INFO)
+LSTLOGGERFMT = logging.Formatter('%(created)f:%(levelname)s:%(message)s')
+LSTLOGGERSTRM = logging.StreamHandler()
+LSTLOGGERSTRM.setFormatter(LSTLOGGERFMT)
+LSTLOGGER.addHandler(LSTLOGGERSTRM)
+
+Logging to both console and file example: 
+LSTLOGGER = logging.getLogger(__name__)
+LSTLOGGER.setLevel(logging.INFO)
+LSTLOGGERFMT = logging.Formatter('%(created)f:%(levelname)s:%(message)s')
+LSTLOGHANDLER = logging.FileHandler('LinuxSystemToolbox.log')
+LSTLOGHANDLER.setFormatter(LSTLOGGERFMT)
+LSTLOGGER.addHandler(LSTLOGHANDLER)
+LSTLOGGERSTRM = logging.StreamHandler()
+LSTLOGGERSTRM.setFormatter(LSTLOGGERFMT)
+LSTLOGGER.addHandler(LSTLOGGERSTRM)
+
