@@ -6,5 +6,30 @@ WARNING: (Default level) Indication things are not so good
 ERROR: More serious prob preventing app from running
 CRITICAL: Serious error
 """
-logging.basicConfig(level=logging.DEBUG)
-#logging.debug(error statement here)
+
+
+#Must import logging module: 
+import logging
+
+#Logging setup:
+logging.basicConfig(filename='Logfile.log', level=logging.DEBUG, format='%(created)f:%(levelname)s:%(message)s')
+
+Options: (Seperate by commas)
+level=logging.DEBUG
+format='%(created)f:%(levelname)s:%(message)s'
+filename='Logfile.log'
+
+#Send log entry
+logging.debug(error statement here)
+
+
+
+
+
+Better/Improved Logging Setup Example: 
+LSTLOGGER = logging.getLogger(__name__)
+LSTLOGGER.setLevel(logging.INFO)
+LSTLOGGERFMT = logging.Formatter('%(created)f:%(levelname)s:%(message)s')
+LSTLOGHANDLER = logging.FileHandler('LinuxSystemToolbox.log')
+LSTLOGHANDLER.setFormatter(LSTLOGGERFMT)
+LSTLOGGER.addHandler(LSTLOGHANDLER)
