@@ -1,0 +1,38 @@
+Basics: 
+- Variables (Show all types of variables)
+- Boolean conditions 
+- Chained conditionals
+- Operators 
+- Control flow (if, if else)
+- Loops (for, while, loop through list, loop through dict)
+- Understand lists, dictionaries, strings, bool, int, float
+- Functions
+- Mutable & Immutable data types
+- Common Methods (Case on string, add elements to list, etc.)
+- Basic file i/o
+
+Intermediate: 
+- OOP (Understand classes and objects)
+- Design patterns
+- Data structures ()
+- Comprehensions (List comp, dict comp, set comp etc)
+- Lambda functions (Anonymous function)
+- Collections Module, Map and Filter
+- *args % **kwargs
+- Inheritence
+- Advanced class methods (dunder methods)
+- PIP
+- Environments (Anaconda)
+- Make your own modules
+- Async IO
+
+Advanced:
+- Decorators (@staticmethod)
+- Generators (Utilize memory efficiently)
+- Context Managers (with)
+- Metaclasses
+- Concurrency
+- Parrallelism (multi-threading)
+- Testing (unit testing, test driven development)
+- Build and Manipulate Packages
+- Cython
